@@ -8,3 +8,8 @@ function run () {
 
     output.contentWindow.eval(jsCode.value);
 }
+
+window.addEventListener('beforeunload', function (e) {
+    let messege = "Are you sure you want to Leave ?";
+    e.returnValue = messege;
+}) 
